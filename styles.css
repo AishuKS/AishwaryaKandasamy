@@ -1,0 +1,401 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 70px 0 0 0; /* Add top padding to prevent content from being hidden behind the fixed header */
+    background-color: #e6dace;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    position: fixed; /* Fix the header at the top */
+    width: 100%; /* Ensure the header spans the entire width */
+    top: 0;
+    z-index: 1000; /* Ensure the header is above other content */
+}
+
+.header a {
+    text-decoration: none;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 80%;
+    max-width: 1000px;
+    margin-bottom: -10px;
+}
+
+.left-side {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4ece6;
+}
+
+nav {
+    display: flex;
+    gap: 20px; /* Creates space between the links */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #d3d3d3; /* Light grey color on hover */
+    color: #333; /* Maintain text color on hover */
+}
+
+nav a.active {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.contact {
+    padding-right: 30px;
+}
+
+.profile-picture {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd; /* Optional: Add a background color */
+}
+
+.profile-picture img {
+    width: 120%;
+    height: 500%;
+    object-fit: cover;
+    object-position: 47% 70%;/* Center the image */
+    border-radius: 50%; /* Ensure the image respects the circular border */
+}
+
+.role {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -90px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.right-side {
+    width: 50%;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 24px; 
+    font-weight: bold; 
+}
+
+.buttons {
+    display: flex; /* Enable flexbox layout */
+    justify-content: flex-start; /* Align items to the start (left) */
+    margin-bottom: 20px;
+    padding-right: 30px;
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 10px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block; /* Add this line */
+    margin-right: 5px;
+}
+
+.button:hover {
+    background-color: #0062cc;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .projects-container {
+        padding: 10px;
+    }
+}
+
+/* PROJECTS */
+.project-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.project-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%; /* Set a width to control the number of projects per row */
+    margin-bottom: 1px; /* Add margin between project rows */
+    padding-left: 50px;
+    padding-bottom: 5px;
+}
+
+.project-card {
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Add display: flex */
+    flex-direction: column; /* Set the direction to column */
+    align-items: center; /* Center the items */
+}
+
+.project-card a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.project-card h2 {
+    text-align: center; /* Add this to center the project names */
+}
+
+.github-icon {
+    width: 30px; 
+    height: 30px;
+    margin: 10px; /* Add some margin around the icon */
+    background-color: transparent; /* Ensure the icon background is transparent */
+    mix-blend-mode: multiply; /* Use multiply to blend the image with the background */
+    opacity: 0.8; /* Adjust the opacity if needed */
+    border-radius: 10%;
+}
+
+#github-link:link,
+#github-link:visited {
+    color: black; /* Text color */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Style for hover effect */
+#github-link:hover {
+    /* text-decoration: underline; Adds underline on hover */
+    color: black; /* Changes text color on hover */
+}
+
+/* Style for active (clicked) state */
+#github-link:active {
+    text-decoration: none; /* Ensures no underline on active */
+    color: black; /* Ensures text color doesn't change on active */
+}
+
+
+/*EXPERIENCE*/
+.exp-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.exp-header {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.date {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black;
+}
+
+.role {
+    text-align: left;
+    font-size: 1.2em;
+    color: black;
+    margin: 0 20px;
+    flex: 0 0 150px;
+}
+.content {
+    flex: 1;
+    border-left: 2px solid black;
+    padding-left: 20px;
+    margin: 0 20px;
+}
+.company-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+.paragraph {
+    color: black;
+    font-size: 1em;
+}
+
+
+#TECHNICAL_SKILLS
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.skills-section {
+    width: 80%;
+    max-width: 1000px;
+    /* background-color: #f4f4f4; */
+    border-radius: 10px;
+    padding-left: 280px;
+}
+
+.technical-h1 {
+    font-size: 2.5rem;
+    margin-bottom: -30px;
+    text-align: center;
+}
+
+.skills-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1px; /* Adjusted gap to reduce space between divs */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 50px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.skills-category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skills-category p {
+    font-size: 1rem;
+    margin: 1px;
+}
+
+.section-header {
+    padding-top: 100px; /* Adjust this value based on the height of your header */
+    margin-top: -100px; /* This will adjust the scroll position to compensate for the padding */
+}
+
+#CONTACT
+
+.contact-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.center-content {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.center-content h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.center-content p {
+    margin: 10px 0;
+}
+
+.center-content a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.contact-email{
+    padding-right: 220px;
+}
+
+.contact-resume{
+    padding-right: 190px;
+}
+
+.contact-links{
+    font-size: 20px;
+}
