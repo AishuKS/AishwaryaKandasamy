@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", function() {
     function loadContent(url, containerId) {
         fetch('sections/' + url)
             .then(response => response.text())
